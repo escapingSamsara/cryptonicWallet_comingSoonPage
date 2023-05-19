@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: url(./assets/img/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(80px) rotate(-360deg);
+  }
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.045),
+    rgba(39, 83, 148, 0.164)
+  );
+}
+
+#wrapper::after {
+  border-radius: 50%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  content: '';
+  height: 680px;
+  position: absolute;
+  width: 680px;
+}
+#wrapper::before {
+  border-radius: 50%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  content: '';
+  height: 680px;
+  position: absolute;
+  width: 680px;
+}
+#wrapper:before {
+  filter: blur(20px) saturate(150%) contrast(45%) brightness(125%);
+  animation: orbit 10s linear infinite;
+  background: -moz-radial-gradient(top left, #ffffff, #0066fff1);
+  left: 68%;
+  top: 15%;
+}
+#wrapper::after {
+  filter: blur(20px) saturate(150%) contrast(45%) brightness(125%);
+  animation: orbit 9s linear infinite reverse;
+  background: -moz-radial-gradient(top left, #ffffff, #0066fff1);
+  top: 1%;
+  left: 5%;
+}
+.logo-container {
+  height: 10vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-container {
+  z-index: 2;
+  background: none;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+.main-container:before {
+  background-color: 'rgba(255, 255, 255, 0.062)';
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.text-container {
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+.header-header {
+  z-index: 3;
+  height: 30%;
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  font-size: 6.75rem;
+  padding-left: 5vw;
+  padding-top: 1rem;
+  text-shadow: 1px 1px 7.5px #00000071;
+  color: #0066ff;
+}
+.header-text {
+  z-index: 3;
+  height: 17.5%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.text-container h2 {
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  font-size: 4.25rem;
+  padding-right: 5vw;
+  color: #ffffff;
+  letter-spacing: 1.25px;
+  text-shadow: 1px 1px 20px #00000051;
+}
+.header1 {
+  margin-top: 5rem;
+}
+.header2 {
+  padding-bottom: 1.5rem;
+}
+.text-container p {
+  z-index: 3;
+  height: 60%;
+  width: 100%;
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #00000051;
+}
+.cta-text {
+  text-align: center;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 65%;
+}
+.cta-text p {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  height: 20%;
+  margin-bottom: 5vh;
+  flex-direction: row;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.socials {
+  padding-left: 5vw;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.socials-icons a {
+  height: 50px;
+  width: 50px;
+  box-shadow: 1px 1px 10px #00000051;
+  background: #005ae0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.cta-btn {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+button {
+  z-index: 3;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  padding: 0.45em 1.2em;
+  font-size: 1.75rem;
+  font-weight: 500;
+  background-color: #005ae0;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  box-shadow: 1px 1px 10px #00000051;
+}
