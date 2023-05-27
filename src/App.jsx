@@ -6,6 +6,9 @@ function App() {
     <>
       <div id="wrapper">
         <MainContainer />
+        <div className="phone-hands">
+          <div className="img-container"></div>
+        </div>
       </div>
     </>
   )

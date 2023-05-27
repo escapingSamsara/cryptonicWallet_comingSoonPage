@@ -1,0 +1,83 @@
+.launch-info {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.launch-info-text {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  font-size: 1.35rem;
+  display: flex;
+  line-height: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #00000051;
+}
+.launch-info-text-box {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 12.5vw;
+  height: 100%;
+  align-items: center;
+}
+.launch-info-text p {
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.launch-timer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 12.5vw;
+  align-items: flex-start;
+}
+.launch-time {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+}
+.launch-time .timer {
+  margin: 0 0.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.launch-time p {
+  font-size: 3.25rem;
+  margin-bottom: -2.5px;
+  text-shadow: 1px 1px 10px #00000051;
+}
+.launch-time span {
+  font-size: 0.75rem;
+  padding-left: 0.15rem;
+  text-shadow: 1px 1px 10px #00000051;
+  color: #ffffff;
+}
+
+@media all and (min-width: 640px) {
+  .launch-info-text {
+    font-size: 1.45rem;
+  }
+  .launch-time p {
+    font-size: 3rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .launch-info-text {
+    font-size: 1.55rem;
+  }
+  .launch-time p {
+    font-size: 3.25rem;
+  }
+}
